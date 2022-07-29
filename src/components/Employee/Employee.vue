@@ -20,8 +20,8 @@
     <v-divider></v-divider>
     <v-card-text>
     <v-data-table
-        :headers="headers"
-        :items="employee"
+        :headers="$store.state.employee.headers"
+        :items="$store.state.employee.employee"
         :search="search"
         >
         <template v-slot:[`item.actions`]="{ item }">
@@ -58,49 +58,12 @@ import EmployeeDetail from './EmployeeDetail.vue'
     data () {
       return {
         search: '',
-       
-        headers: [
-          { text: 'Full Name',align: 'start',value: 'name'},
-          { text: 'Phone No', value: 'phone' },
-          { text: 'Email', value: 'email' },
-          { text: 'Tin NO', value: 'tin' },
-          { text: 'Work Type', value: 'workType' },
-          { text: 'Bank Account', value: 'account' },
-          { text: 'Actions', value: 'actions', sortable: false },
-        ],
-        employee: [
-          {
-            name: 'Abel Tesfaye',
-            phone: '0956457896',
-            email: 'able@gmail.com',
-            tin: '00123654',
-            workType: 'Permanent',
-            account: '1000456789523',
-          },
-          {
-            name: 'Ephrem Neguse',
-            phone: '0900457896',
-            email: 'emprem@gmail.com',
-            tin: '00563654',
-            workType: 'Contractual',
-            account: '1000478789523',
-          },
-          {
-            name: 'Mikiyas Tadele',
-            phone: '0911787896',
-            email: 'mikiyas@gmail.com',
-            tin: '00568654',
-            workType: 'Part-Time',
-            account: '1000400189523',
-          },
-          
-        ],
       }
     },
     methods: {
         registerEmployee(value){
-           this.employee.push(value)
-           console.log(this.employee)
+          this.$store.state.employee.employee.push(value)
+          console.log(value)
         }
     },
   }

@@ -16,9 +16,19 @@ const routes = [
     component: () => import('../components/Employee/Employee.vue')
   },
   {
+    path: '/department',
+    name: 'Department',
+    component: () => import('../components/Department/Department.vue')
+  },
+  {
     path: '/payroll',
     name: 'Payroll',
     component: () => import('../components/Payroll/Payroll.vue')
+  },
+  {
+    path: '/report',
+    name: 'Report',
+    component: () => import('../components/Report/Report.vue')
   },
   {
     path: '/users',

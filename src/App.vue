@@ -10,7 +10,7 @@
             Payroll Managment
           </v-list-item-title>
           <v-list-item-subtitle>
-            <v-icon x-large color="green">mdi-circle-small</v-icon> Welcome Admin
+            <v-icon x-large color="green">mdi-circle-small</v-icon> Online Admin
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -60,7 +60,9 @@
         items: [
           { text: 'Dashboard', icon: 'mdi-monitor-dashboard', to:'/' },
           { text: 'Employee', icon: 'mdi-account-multiple', to:'/employee' },
+          { text: 'Department', icon: 'mdi-account-multiple', to:'/department' },
           { text: 'Payroll', icon: 'mdi-cash-multiple', to:'/payroll' },
+          { text: 'Report', icon: 'mdi-file-document-multiple', to:'/report' },
           { text: 'Users', icon: 'mdi-account-circle', to:'/users' },
           { text: 'Setting', icon: 'mdi-cog-outline', to:'/setting' },
           { text: 'Logout', icon: 'mdi-logout', to:'/logout' },

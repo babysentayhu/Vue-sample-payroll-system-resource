@@ -103,7 +103,7 @@
                     <v-col
                         cols="12"
                         sm="6"
-                    >
+                        md="4">
                         <v-select
                         :items="['Marketing Officer', 'IT Officer', 'Accountant', 'Assistant Manager']"
                         label="Position"
@@ -114,6 +114,18 @@
                     <v-col
                         cols="12"
                         sm="6"
+                        md="4">
+                        <v-select
+                        :items="['Managment', 'IT', 'Finance', 'Marketing']"
+                        label="Department"
+                        v-model="employeeData.department"
+                        required
+                        ></v-select>
+                    </v-col>
+                    <v-col
+                        cols="12"
+                        sm="6"
+                        md="4"
                     >
                         <v-select
                         :items="['Permanent', 'Contract', 'Part-Time']"
@@ -218,6 +230,7 @@
                 homeNumber:'',
                 birthDate: '',
                 postion: '',
+                department: '',
                 hiringDate: '',
                 salary: '',
                 allowance: '',

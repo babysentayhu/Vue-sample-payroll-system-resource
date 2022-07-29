@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkpayroll_managment_system"]=self["webpackChunkpayroll_managment_system"]||[]).push([[580],{5580:function(l,e,n){n.r(e);var a,s,t=n(1001),u={},m=(0,t.Z)(u,a,s,!1,null,null,null);e["default"]=m.exports}}]);
-//# sourceMappingURL=580.7a112e19.js.map
