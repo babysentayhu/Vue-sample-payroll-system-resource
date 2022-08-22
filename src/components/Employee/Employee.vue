@@ -3,7 +3,8 @@
     <v-card-title>
         <v-row>
             <v-col colls="4">
-              <add-employee v-on:registerEmployee="registerEmployee" />
+              <!-- <add-employee v-on:registerEmployee="registerEmployee" /> -->
+              <add-employee />
             </v-col>
             <v-col colls="8"> 
                 <v-text-field
@@ -61,10 +62,10 @@ import EmployeeDetail from './EmployeeDetail.vue'
       }
     },
     methods: {
-        registerEmployee(value){
-          this.$store.state.employee.employee.push(value)
-          console.log(value)
-        }
+        // registerEmployee(value){
+        //   this.$store.state.employee.employee.push(value)
+        //   console.log(this.$store.state.employee.employee)
+        // }
     },
   }
 </script>

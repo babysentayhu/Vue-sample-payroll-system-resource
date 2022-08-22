@@ -36,12 +36,21 @@
           },
           
         ],
+        
+        
     }
     const getters = {
     }
     const mutations = {
+      addEmployee(state, employee) {
+        state.employee.push(employee);
+        console.log(`form mutation the object is ${employee}`)
+      }
     }
     const actions = {
+      addEmployee({commit}, employee) {
+        commit('addEmployee',employee);
+      }
     }
 export default {
     namespaced: true,    

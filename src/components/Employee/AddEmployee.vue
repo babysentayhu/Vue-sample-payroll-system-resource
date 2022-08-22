@@ -187,11 +187,9 @@
                     multiple
                     ></v-autocomplete>
                 </v-col> -->
-               
             </v-row>
              </v-form>
           </v-container>
-          <small>*indicates required field</small>
         </v-card-text>
         <v-divider></v-divider>
         <v-card-actions>
@@ -240,10 +238,41 @@
         }
     },
     methods: {
+        // saveEmployee(){
+        //     console.log(this.$store.state.employee.employeeData)
+        //     this.$emit("registerEmployee", this.$store.state.employee.employeeData);
+        //     this.dialog = false;
+        // } 
+        resetData(){
+            this.employeeData = {
+                name:'',
+                phone:'',
+                email:'',
+                city:'',
+                tin:'',
+                homeNumber:'',
+                birthDate: '',  
+                postion: '',
+                department: '',
+                hiringDate: '',
+                salary: '',
+                allowance: '',
+                account: '',
+                workType: ''
+            }
+            
+        },
+        
         saveEmployee(){
-            this.$emit("registerEmployee", this.employeeData);
+            this.$store.dispatch('employee/addEmployee',this.employeeData)
+            .then(()=>{
+                this.resetData()
+            })
+            
             this.dialog = false;
         }
-    }
+    },
+   
+   
   }
 </script>
